@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Concord">
+<meta name="theme-color" content="#120e16"><title>Concord Writer</title>
+<link rel="apple-touch-icon" href="icons/icon-180.png"><link rel="icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css"></head>
+<body data-theme="dark">
+<header id="top"><button id="menuBtn" class="ib" aria-label="Manuscript">☰</button><div id="ptitle">Concord Writer</div><span id="saved" class="saved">Saved</span><button id="focusBtn" class="ib" aria-label="Focus mode">◎</button></header>
+<nav id="tabs"><button data-v="write" class="on">Write</button><button data-v="plot">Plot</button><button data-v="notes">Notes</button><button data-v="search">Search</button><button data-v="goals">Goals</button><button data-v="more">Backup</button></nav>
+<div id="body">
+<aside id="side"><div class="sidehead"><b>Manuscript</b><button id="addBook" class="sm">+ Book</button></div><div id="tree"></div></aside>
+<main id="main">
+ <section id="v-write" class="view on">
+  <div id="sceneHead"><input id="sceneTitle" placeholder="Scene title"><button id="metaBtn" class="sm">Details</button><button id="splitBtn" class="sm wide-only">Notes ⇆</button></div>
+  <div id="meta" hidden><label>POV <input id="mPov"></label><label>Status <select id="mStatus"><option>draft</option><option>revised</option><option>final</option></select></label><label>Synopsis <textarea id="mSyn" rows="2"></textarea></label><label>Notes <textarea id="mNotes" rows="3"></textarea></label><div class="row"><button id="snapBtn" class="sm">Snapshot scene</button><button id="snapList" class="sm">Scene history</button></div></div>
+  <div id="wrap"><div id="editor" contenteditable="true" spellcheck="true"></div><aside id="split" hidden></aside></div>
+  <div id="wc" class="wc"></div>
+ </section>
+ <section id="v-plot" class="view"></section>
+ <section id="v-notes" class="view"></section>
+ <section id="v-search" class="view"><input id="q" type="search" placeholder="Search scenes & notes…"><div id="results"></div></section>
+ <section id="v-goals" class="view"></section>
+ <section id="v-more" class="view"></section>
+</main></div>
+<div id="tb"><button data-c="bold"><b>B</b></button><button data-c="italic"><i>I</i></button><button data-c="h2">H2</button><button data-c="h3">H3</button><button data-c="p">¶</button><button data-c="sb">⁂</button><button data-c="undo">↶</button><button data-c="redo">↷</button><button data-c="done">⌄</button></div>
+<div id="modal" hidden><div class="mbox"><div id="mbody"></div><div class="row"><button id="mclose" class="sm">Close</button></div></div></div>
+<script src="app.js"></script></body></html>
